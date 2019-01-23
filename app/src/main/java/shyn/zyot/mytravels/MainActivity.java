@@ -6,12 +6,14 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.widget.TextView;
 
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
@@ -31,12 +33,15 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.lifecycle.Observer;
@@ -47,6 +52,7 @@ import shyn.zyot.mytravels.base.BaseActivity;
 import shyn.zyot.mytravels.base.MyApplication;
 import shyn.zyot.mytravels.base.MyConst;
 import shyn.zyot.mytravels.base.TravelSort;
+import shyn.zyot.mytravels.database.AppDatabase;
 import shyn.zyot.mytravels.entity.Travel;
 import shyn.zyot.mytravels.entity.TravelBaseEntity;
 import shyn.zyot.mytravels.hotplace.HotPlaceActivity;
@@ -84,6 +90,92 @@ public class MainActivity extends BaseActivity implements TravelListItemClickLis
             }
         }
     };
+
+    ///// Phung
+    private ConstraintLayout UpComingLayout;
+    private TextView tvUpcoming;
+    private TextView tvNextTravel;
+    Travel upComingTravel;
+    boolean nowHappening;
+
+    @Override
+    protected void onResume() {
+        updateUpComing();
+        super.onResume();
+    }
+
+    private void updateUpComing() {
+        new updateUpComingAsyncTask().execute();
+    }
+
+    private class updateUpComingAsyncTask extends AsyncTask<Void, Void, Void> {
+        boolean foundUpComing = false;
+        @Override
+        protected Void doInBackground(Void... voids) {
+            String cur_date ;
+            Calendar c = Calendar.getInstance();
+            SimpleDateFormat df = new SimpleDateFormat("yyyyMMddHHmmss");
+            cur_date = df.format(c.getTime());
+            cur_date = cur_date.substring(0,8)+"000000";
+            // -> tính current date dưới dạng: yyyyMMdd000000  -> vì khi tạo travel chỉ lấy ngày tháng năm không dùng giờ.
+
+            // Xét trong tất cả các travel (đã được xếp ngày bắt đầu tăng dần) -> xét từ ngày bắt đầu sớm nhất đến khi thấy travel đầu tiên thõa mãn thì dừng
+            List<Travel> listTravel = AppDatabase.getDatabase(getBaseContext()).travelDao().getAllTravelsByStartDateAsc();
+            for (Travel travel: listTravel) {
+                // so sánh ngày bắt đầu của travel hiện tại với ngày hiện tại.
+                int compareStartDate = travel.getDateTime().compareTo(String.valueOf(cur_date));
+
+                if ( compareStartDate > 0) {
+                    // if date of this travel > current date  ----> upcoming
+                    upComingTravel = travel;
+                    foundUpComing = true;
+                    nowHappening = false;
+                    break;
+                }
+                else if (compareStartDate == 0) {
+                    // if start date of this travel = current date  ----> today is the start date
+                    upComingTravel = travel;
+                    foundUpComing = true;
+                    nowHappening = true;
+                    break;
+                }
+                else if (travel.getEndDt().compareTo(String.valueOf(cur_date)) > 0 ) {
+                    // if start date of this travel < current date   &&  end date of this travel > current date ---->  now happening
+                    upComingTravel = travel;
+                    foundUpComing = true;
+                    nowHappening = true;
+                    break;
+                }
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            String result;
+            if (!foundUpComing) {
+                upComingTravel = null;
+                tvUpcoming.setVisibility(View.GONE);
+                tvNextTravel.setText("\tYou have no upcoming travel!");
+            }
+            else if (!nowHappening){
+                tvUpcoming.setText("Upcoming Travel:");
+                tvUpcoming.setVisibility(View.VISIBLE);
+                result =  upComingTravel.getTitle();
+                tvNextTravel.setText(result);
+            }
+            else {
+                tvUpcoming.setText("Now Happening:");
+                tvUpcoming.setVisibility(View.VISIBLE);
+                result =  upComingTravel.getTitle();
+                tvNextTravel.setText(result);
+            }
+            super.onPostExecute(aVoid);
+        }
+    }
+
+
+    /////
 
     @Override
     public void onListItemClick(View view, int position, TravelBaseEntity entity, boolean longClick) {
@@ -207,6 +299,13 @@ public class MainActivity extends BaseActivity implements TravelListItemClickLis
         if (MyString.isNotEmpty(((MyApplication) getApplication()).getMainTitle())) {
             mToolbarLayout.setTitle(((MyApplication) getApplication()).getMainTitle());
         }
+
+        UpComingLayout = findViewById(R.id.UpComingLayout);
+        tvUpcoming = findViewById(R.id.tvUpComing);
+        tvNextTravel = findViewById(R.id.tvNextTravel);
+        UpComingLayout.setOnClickListener(this);
+        tvUpcoming.setOnClickListener(this);
+        tvNextTravel.setOnClickListener(this);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -373,6 +472,17 @@ public class MainActivity extends BaseActivity implements TravelListItemClickLis
             case R.id.subtitle_txt:
                 startActivity(new Intent(MainActivity.this, HotPlaceActivity.class));
                 break;
+            case R.id.UpComingLayout:
+            case R.id.tvUpComing:
+            case R.id.tvNextTravel: {
+                if (upComingTravel != null) {
+                    // call TravelDetailActivity
+                    Intent intent = new Intent(MainActivity.this, TravelDetailActivity.class);
+                    intent.putExtra(MyConst.REQKEY_TRAVEL_ID, upComingTravel.getId());
+                    startActivity(intent);
+                }
+            }
+            break;
         }
     }
 

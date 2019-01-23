@@ -43,4 +43,9 @@ public interface TravelDao {
     @Query("SELECT * FROM travel where id=:id")
     LiveData<Travel> getTravelById(long id);
 
+    ///// Phung
+    @Query("SELECT * from travel ORDER BY dateTime")
+    List<Travel> getAllTravelsByStartDateAsc();
+    /////
+
 }

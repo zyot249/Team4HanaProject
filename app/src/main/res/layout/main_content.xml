@@ -9,12 +9,44 @@
     android:paddingHorizontal="5dp"
     tools:showIn="@layout/activity_main">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/UpComingLayout"
+        android:background="#5C97BF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvUpComing"
+            android:fontFamily="sans-serif"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="Now Happening: "/>
+        <TextView
+            android:id="@+id/tvNextTravel"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="50dp"
+            tools:text="Ha Noi"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            app:layout_constraintLeft_toRightOf="@+id/tvUpComing"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvUpComing"
+            app:layout_constraintBottom_toBottomOf="@+id/tvUpComing" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/UpComingLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
