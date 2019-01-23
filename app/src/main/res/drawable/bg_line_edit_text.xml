@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_hovered="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:bottom="@dimen/line_edit_text" android:left="@dimen/spacing_neg" android:right="@dimen/spacing_neg" android:top="@dimen/spacing_neg">
+                <shape android:shape="rectangle">
+                    <stroke android:width="@dimen/line_edit_text" android:color="@color/colorAccent" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_focused="true">
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:bottom="@dimen/line_edit_text" android:left="@dimen/spacing_neg" android:right="@dimen/spacing_neg" android:top="@dimen/spacing_neg">
+                <shape android:shape="rectangle">
+                    <stroke android:width="@dimen/line_edit_text" android:color="@color/colorAccent" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:bottom="@dimen/line_edit_text" android:left="@dimen/spacing_neg" android:right="@dimen/spacing_neg" android:top="@dimen/spacing_neg">
+                <shape android:shape="rectangle">
+                    <stroke android:width="@dimen/line_edit_text" android:color="@color/colorBackgroundTint" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

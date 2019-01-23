@@ -1,0 +1,111 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="AppTheme.DialogImageViewer" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">true</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    // new styles
+
+    <style name="ImageCircle" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="background">@drawable/bg_circle</item>
+        <item name="android:padding">@dimen/padding_image_circle</item>
+    </style>
+
+    <style name="IconOnHeader" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/bg_floating_button</item>
+        <item name="android:padding">@dimen/button_padding_floating</item>
+        <item name="android:tint">@color/colorTextWhite</item>
+        <item name="android:layout_margin">@dimen/padding_text_horizontal</item>
+    </style>
+
+    <style name="LabelTextError" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorError</item>
+        <item name="android:textSize">@dimen/label_text_content</item>
+        <item name="android:paddingBottom">@dimen/spacing_content_vertical</item>
+        <item name="android:paddingLeft">@dimen/margin_normal_16</item>
+        <item name="android:paddingRight">@dimen/margin_normal_16</item>
+    </style>
+
+    <style name="LabelTextCommon" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorLabelTextCommon</item>
+        <item name="android:textSize">@dimen/label_common_text</item>
+        <item name="android:paddingRight">@dimen/padding_text_horizontal</item>
+    </style>
+
+    <style name="LabelTextTitleCommon" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorLabelTextCommon</item>
+        <item name="android:textSize">@dimen/label_title_beside_image</item>
+        <item name="android:paddingRight">@dimen/padding_text_horizontal</item>
+    </style>
+
+    <style name="LabelTextTitleBesideImage" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/colorHeaderTitle</item>
+        <item name="android:textSize">@dimen/label_title_beside_image</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingRight">@dimen/padding_text_horizontal</item>
+    </style>
+
+    <style name="LabelTextHeader" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:padding">@dimen/margin_normal_16</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
+        <item name="android:textSize">@dimen/label_header_text</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+
+    </style>
+
+    <style name="Button" parent="Base.Widget.AppCompat.ActionButton">
+        <item name="android:background">@drawable/bg_button</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorTextWhite</item>
+        <item name="android:layout_marginLeft">@dimen/margin_normal_16</item>
+        <item name="android:layout_marginRight">@dimen/margin_normal_16</item>
+
+    </style>
+
+    <style name="EditText" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColorHint">@color/colorEditTextHint</item>
+        <item name="android:textColor">@color/colorEditText</item>
+        <item name="android:layout_margin">@dimen/margin_normal_16</item>
+        <item name="android:textSize">@dimen/text_edit_size</item>
+        <item name="android:padding">@dimen/padding_text_horizontal</item>
+        <item name="android:background">@drawable/bg_line_edit_text</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="FloatingButton" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/bg_floating_button</item>
+        <item name="android:padding">@dimen/button_padding_floating</item>
+        <item name="android:tint">@color/colorTextWhite</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_margin">@dimen/margin_normal_16</item>
+    </style>
+</resources>

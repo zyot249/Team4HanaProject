@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="36dp"
+    android:backgroundTint="#CC372420"
+    android:backgroundTintMode="src_atop"
+    android:background="@mipmap/travel_images_hd_2"
+    tools:context=".LockScreenActivity">
+
+    <TextView
+        android:textColor="#CCFFFFFF"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:gravity="center"
+        android:text="Enter your password"
+        android:textSize="30dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:soundEffectsEnabled="true"
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/check2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:clickable="false" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/check3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:clickable="false" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/check4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/one_number"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button"
+            android:text="1"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/two_number"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/round_button"
+            android:text="2"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/three_number"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button"
+            android:text="3"
+            android:textSize="45dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/four_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_button"
+            android:text="4"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/five_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/round_button"
+            android:text="5"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/six_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_button"
+            android:text="6"
+            android:textSize="45dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/seven_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_button"
+            android:text="7"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/eight_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/round_button"
+            android:text="8"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/nine_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/round_button"
+            android:text="9"
+            android:textSize="45dp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/zero_number"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/round_button"
+            android:text="0"
+            android:textSize="45dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="#00372420"
+            android:textColor="#CCFFFFFF"
+            android:id="@+id/delete"
+            style="@style/Base.TextAppearance.AppCompat.Widget.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/zero_number"
+            android:backgroundTintMode="screen"
+            android:text="Delete"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

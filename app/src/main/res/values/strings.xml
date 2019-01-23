@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name">My Travels</string>
+    <string name="action_new_travel">New Travel</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_change_title">Change main title</string>
+    <string name="action_change_photo">Change main photo</string>
+    <string name="action_change_photo_camera">from Camera</string>
+    <string name="action_change_photo_gallery">from Gallery</string>
+    <string name="action_sort_default">Default</string>
+    <string name="action_sort_travel_asc">Travel title ascending</string>
+    <string name="action_sort_travel_desc">Travel title descending</string>
+    <string name="action_sort_start_asc">Start date ascending</string>
+    <string name="action_sort_start_desc">Start date descending</string>
+    <string name="title_activity_new_travel">New Travel</string>
+    <string name="title_activity_edit_travel">Edit Travel</string>
+    <string name="travel_et_hint_enter_title">Enter Travel Title</string>
+    <string name="travel_title_empty">Travel Title is empty!</string>
+    <string name="travel_et_hint_start_dt">Select start date</string>
+    <string name="travel_et_hint_end_dt">Select end date</string>
+    <string name="travel_et_hint_place">Select city</string>
+    <string name="travel_city_empty">City is empty!</string>
+    <string name="travel_startdt_empty">Start date is empty!</string>
+    <string name="travel_enddt_empty">End date is empty!</string>
+    <string name="title_activity_hotplace">Hanoi, Vietnam</string>
+    <string name="action_delete">Delete</string>
+    <string name="travel_del_title">Are you sure you want to delete?</string>
+    <string name="travel_del_msg">All data for this travel will be permanently deleted.</string>
+    <string name="title_activity_travel_detail">Travel Detail</string>
+    <string name="title_frag_daily_plans">Daily Plans</string>
+    <string name="title_frag_dairy">Diary</string>
+    <string name="title_frag_expenses">Expenses</string>
+    <string name="title_activity_plan_detail">Plan detail</string>
+    <string name="title_activity_diary_detail">Diary detail</string>
+    <string name="title_activity_expenses_detail">Expense detail</string>
+    <string name="plan_edit_warn">Please input Title or select Place</string>
+    <string name="diary_edit_warn">Please input Text or select Image</string>
+    <string name="expense_edit_warn">Please input Amount and Title</string>
+    <string name="expense_edit_exchange_warn">Please input Exchange Amount</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="input_date_hint">Date</string>
+    <string name="input_time_hint">Time</string>
+    <string name="input_place_hint">Place</string>
+    <string name="input_plan_title_hint">Title</string>
+    <string name="input_plan_desc_hint">Description</string>
+    <string name="plan_for">Plan for</string>
+    <string name="diary_for">Diary for</string>
+    <string name="diary_desc_hint">Text</string>
+    <string name="expenses_for">Expenses for</string>
+    <string name="expense_amount">Amount</string>
+    <string name="expense_exch_curr_warn">Choose another currency</string>
+    <string name="permission_dialog_title">Please grant those permissions"</string>
+    <string name="permission_camera_gallery">Write External Storage permissions are required to do the task.</string>
+    <string name="permission_camera_msg">Camera and Write External Storage permissions are required to do the task.</string>
+    <string name="permission_not_granted">The required permissions are not approved.</string>
+    <string name="delete_warn_msg">Do you want to cancel the deletion?</string>
+    <string name="undo">UNDO</string>
+    <string name="travel_longclick">Long click the item to edit it.</string>
+    <string name="dont_show_again">Don\'t show again</string>
+    <string name="no_google_map">There are no Google Maps APPs.</string>
+    <string name="btn_restaurants">Restaurants</string>
+    <string name="btn_cafes">Cafes</string>
+    <string name="btn_hotels">Hotels</string>
+    <string name="btn_attractions">Attractions</string>
+    <string name="main_hot_place">How about a trip to Hanoi?</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="welcome_introduce_begin">Write about your own experience</string>
+    <string name="welcome_introduce_end">Record your adventures with beautiful photos, time lines ans more.</string>
+
+    <string name="team4_navigation_drawer_open">Open navigation drawer</string>
+    <string name="team4_navigation_drawer_close">Close navigation drawer</string>
+    // add string facebook team2
+    <string name="facebook_app_id">246401129592530</string>
+    <string name="fb_login_protocol_scheme">fb246401129592530</string>
+
+
+</resources>

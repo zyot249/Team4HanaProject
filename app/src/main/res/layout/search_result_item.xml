@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="72dp"
+    android:paddingHorizontal="@dimen/margin_normal_16">
+
+    <ImageView
+        android:id="@+id/ivTravelImg"
+        android:layout_width="@dimen/width_height_square_image_search_list_item"
+        android:layout_height="@dimen/width_height_square_image_search_list_item"
+        android:layout_marginVertical="@dimen/margin_normal_16"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/tvPlaceAddr"
+        style="@style/TextAppearance.MaterialComponents.Subtitle1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal_16"
+        android:layout_marginTop="@dimen/margin_normal_16"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTravelImg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="city" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal_16"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivTravelImg"
+        app:layout_constraintTop_toBottomOf="@id/tvPlaceAddr"
+        tools:text="date" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/margin_normal_16"
+        android:background="@color/colorLine"
+        app:layout_constraintTop_toBottomOf="@id/tvDate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

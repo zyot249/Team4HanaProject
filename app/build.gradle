@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'vtca'
+            keyPassword 'chlee@'
+            storeFile file('../RELEASE/keystore.jks')
+            storePassword 'chlee@vtca'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "shyn.zyot.mytravels"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 2
+        versionName "1.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+            android.applicationVariants.all { variant ->
+                variant.outputs.all {
+                    def appName = "MyTravel"
+                    def date = new Date()
+                    def formattedDate = date.format('yyyyMMddHHmmss')
+                    outputFileName = appName + "-${variant.name}-${variant.versionName}-" + formattedDate + ".apk"
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha3'
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-places:16.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    // Room components
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    annotationProcessor "androidx.room:room-compiler:$rootProject.roomVersion"
+    androidTestImplementation "androidx.room:room-testing:$rootProject.roomVersion"
+    // Lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.archLifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.archLifecycleVersion"
+    // Paging components
+    implementation "androidx.paging:paging-runtime:$paging_version"
+    testImplementation "androidx.paging:paging-common:$paging_version"
+
+    // add BottomSheet Menu
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    // add FireBase Team2
+
+    implementation 'com.google.firebase:firebase-core:16.0.4'
+
+    // add facebook team2
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+}
+apply plugin: 'com.google.gms.google-services'

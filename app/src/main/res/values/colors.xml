@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1769AA</color>
+    <color name="colorAccent">#42a5f5</color>
+    <color name="text_bg_trans">#CDFFFFFF</color>
+    <color name="transparent_black">#AB000000</color>
+
+    // new color
+    <color name="colorPrimaryLight">#42a5f5</color>
+    <color name="colorButton">#1e88e5</color>
+    <color name="colorOnSelect">#0D47A1</color>
+    <color name="colorHeaderTitle">#37474f</color>
+    <color name="colorLink">#5c9acc</color>
+    <color name="colorSecondary">#00838f</color>
+    <color name="colorSecondaryDark">#005662</color>
+    <color name="colorSecondaryLight">#4fb3bf</color>
+    <color name="colorTextWhite">#FBFAF9</color>
+    <color name="colorTextViewHeader">#333333</color>
+    <color name="colorTextContent">#787878</color>
+    <color name="colorIconMenu">#AFAEAC</color>
+    <color name="colorLabelTextCommon">#858585</color>
+    <color name="colorEditTextHint">#a3a3a3</color>
+    <color name="colorEditText">#2F2F2F</color>
+    <color name="colorIconInForm">#757575</color>
+    <color name="colorBackgroundTint">#d9d8d8</color>
+    <color name="colorError">#d20b0b</color>
+    <color name="colorLogoOrange">#d7782b</color>
+    <color name="colorLine">#9c9b9b</color>
+    <color name="colorViewOnClick">#f4f4f4</color>
+</resources>

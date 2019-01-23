@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".EditTravelActivity"
+    tools:showIn="@layout/activity_edit_travel">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_round_corner_rectangle">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/title_layout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_normal_16"
+            android:layout_marginTop="28dp">
+            <!--android:layout_below="@+id/ll3"-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/title_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Travel title"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/ll1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_layout"
+            android:layout_marginHorizontal="@dimen/margin_normal_16"
+            android:layout_marginTop="23dp">
+
+            <TextView
+                android:id="@+id/tvStartTitle"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="START DATE"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/start_dt"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_view_onclick"
+                android:drawableStart="@drawable/ic_date_range"
+                android:drawableTint="@color/colorIconMenu"
+                android:text="Start date"
+                android:textColor="@color/colorSecondary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vlLine1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ll1"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vlLine1"
+            android:layout_marginHorizontal="@dimen/margin_normal_16"
+            android:layout_marginTop="@dimen/margin_normal_16">
+
+            <TextView
+                android:id="@+id/tvEndTitle"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="END DATE"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/end_dt"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_view_onclick"
+                android:drawableStart="@drawable/ic_date_range"
+                android:drawableTint="@color/colorIconMenu"
+                android:text="End date"
+                android:textColor="@color/colorSecondary"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vlLine"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ll2"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/colorLine" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vlLine"
+            android:layout_marginHorizontal="@dimen/margin_normal_16"
+            android:layout_marginTop="@dimen/margin_normal_16">
+
+            <TextView
+                android:id="@+id/tvSelectPlace"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SELECT CITY"
+                android:textStyle="normal" />
+
+
+            <EditText
+                android:id="@+id/place_et"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_view_onclick"
+                android:cursorVisible="false"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableTint="@color/colorIconMenu"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Travel place"
+                android:textColor="@color/colorIconInForm" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll3"
+            android:layout_alignParentRight="true"
+            android:layout_marginHorizontal="@dimen/margin_normal_16"
+            android:layout_marginTop="28dp"
+            android:text="Add" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

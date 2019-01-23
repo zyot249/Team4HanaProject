@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="22dp">
+
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/place_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/input_date_hint" />
+
+        <TextView
+            android:id="@+id/place_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_map_black_24dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/date_txt"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="place" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imgv_edit_plan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/date_txt"
+            tools:text="title" />
+
+        <ImageView
+            android:id="@+id/imgv_edit_plan"
+            android:layout_width="41dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_edit_black_24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/desc_txt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:textSize="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/imgv_edit_plan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_txt"
+            tools:text="description" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

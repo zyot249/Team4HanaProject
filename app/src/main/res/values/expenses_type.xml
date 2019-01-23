@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="expense_key">
+        <item>EXP</item>
+        <item>BUD</item>
+    </string-array>
+    <string-array name="expense_label">
+        <item>EXPENSES</item>
+        <item>BUDGET</item>
+    </string-array>
+</resources>

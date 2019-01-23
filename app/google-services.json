@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "331757003504",
+    "firebase_url": "https://team2hanaproject.firebaseio.com",
+    "project_id": "team2hanaproject",
+    "storage_bucket": "team2hanaproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331757003504:android:72f7fddf1e5d52ba",
+        "android_client_info": {
+          "package_name": "shyn.zyot.mytravels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331757003504-6e5imd2gcp4mhsj4cfd8ssc9b2hfe6db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-vBGDhuRWejw6xbCWhZkF5TYEay9ZxHc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="shyn.zyot.mytravels.MainActivity">
+
+    <item android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="ifRoom|withText"
+        android:orderInCategory="100"/>
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort"
+        android:orderInCategory="200"
+        android:title="@string/action_sort"
+        app:showAsAction="ifRoom|withText">
+        <menu>
+            <group
+                android:id="@+id/action_sort_group"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_sort_default"
+                    android:title="@string/action_sort_default" />
+                <item
+                    android:id="@+id/action_sort_travel_asc"
+                    android:title="@string/action_sort_travel_asc" />
+                <item
+                    android:id="@+id/action_sort_travel_desc"
+                    android:title="@string/action_sort_travel_desc" />
+                <item
+                    android:id="@+id/action_sort_start_asc"
+                    android:title="@string/action_sort_start_asc" />
+                <item
+                    android:id="@+id/action_sort_start_desc"
+                    android:title="@string/action_sort_start_desc" />
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_change_title"
+        android:orderInCategory="300"
+        android:title="@string/action_change_title"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="collapseActionView" />
+    <item
+        android:id="@+id/action_change_photo"
+        android:orderInCategory="400"
+        android:title="@string/action_change_photo"
+        app:showAsAction="withText">
+        <menu>
+            <item
+                android:id="@+id/action_change_photo_camera"
+                android:orderInCategory="200"
+                android:title="@string/action_change_photo_camera"
+                app:showAsAction="ifRoom|withText" />
+            <item
+                android:id="@+id/action_change_photo_gallery"
+                android:orderInCategory="200"
+                android:title="@string/action_change_photo_gallery"
+                app:showAsAction="ifRoom|withText" />
+        </menu>
+    </item>
+</menu>

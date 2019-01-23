@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_list_item"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivTravelImg"
+        android:layout_width="@dimen/width_main_travel_item_image"
+        android:layout_height="@dimen/height_main_travel_item_image"
+        android:layout_marginVertical="@dimen/margin_vertical_list_item"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <RelativeLayout
+        android:id="@+id/rlText"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="@dimen/margin_vertical_list_item"
+        app:layout_constraintEnd_toStartOf="@id/ivEdit"
+        app:layout_constraintStart_toEndOf="@id/ivTravelImg"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_txt"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/padding_left_list_item_text"
+            android:paddingRight="@dimen/margin_normal_8"
+            android:singleLine="true"
+            tools:text="Travel Title" />
+
+        <TextView
+            android:id="@+id/place_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_txt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/padding_left_list_item_text"
+            android:paddingRight="@dimen/margin_normal_8"
+            android:singleLine="true"
+            tools:text="Place address ahahahhahaha hahah hahahahaha" />
+
+        <TextView
+            android:id="@+id/date_txt"
+            style="@style/TextAppearance.AppCompat.Widget.DropDownItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/place_txt"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/padding_left_list_item_text"
+            android:paddingRight="@dimen/margin_normal_8"
+            android:singleLine="true"
+            tools:text="travel date time start-end" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:paddingRight="8dp"
+        android:paddingLeft="8dp"
+        android:src="@drawable/ic_edit"
+        android:background="@drawable/bg_view_onclick"
+        android:tint="@color/colorLabelTextCommon"
+        android:onClick="onClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/colorLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rlText" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/fab_margin">
+
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_access_time_black_24dp"
+        android:onClick="onClick"
+        android:text="@string/input_time_hint"
+        android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Button"
+        app:layout_constraintEnd_toStartOf="@+id/place_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/place_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/ic_location_on_black_24dp"
+        android:onClick="onClick"
+        android:hint="@string/input_place_hint"
+        android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/time_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Place" />
+
+    <ImageButton
+        android:id="@+id/camera_btn"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_txt"
+        app:srcCompat="@drawable/ic_camera_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/image_btn"
+        style="@android:style/Widget.Material.ImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="onClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/camera_btn"
+        app:srcCompat="@drawable/ic_image_black_24dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

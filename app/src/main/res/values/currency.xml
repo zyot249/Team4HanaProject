@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="currency_key">
+        <item>USD</item>
+        <item>VND</item>
+        <item>KRW</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+        <item>AUD</item>
+        <item>CAD</item>
+        <item>CHF</item>
+        <item>CNY</item>
+        <item>SEK</item>
+        <item>NZD</item>
+        <item>MXN</item>
+        <item>SGD</item>
+        <item>HKD</item>
+        <item>NOK</item>
+        <item>TRY</item>
+        <item>RUB</item>
+        <item>INR</item>
+        <item>BRL</item>
+        <item>ZAR</item>
+    </string-array>
+    <string-array name="currency_label">
+        <item>USD(US$)</item>
+        <item>VND(₫)</item>
+        <item>KRW(₩)</item>
+        <item>EUR(€)</item>
+        <item>JPY(¥)</item>
+        <item>GBP(£)</item>
+        <item>AUD(A$)</item>
+        <item>CAD(C$)</item>
+        <item>CHF(Fr)</item>
+        <item>CNY(元)</item>
+        <item>SEK(kr)</item>
+        <item>NZD(NZ$)</item>
+        <item>MXN($)</item>
+        <item>SGD(S$)</item>
+        <item>HKD(HK$)</item>
+        <item>NOK(kr)</item>
+        <item>TRY(₺)</item>
+        <item>RUB(₽)</item>
+        <item>INR(₹)</item>
+        <item>BRL(R$)</item>
+        <item>ZAR(R)</item>
+    </string-array>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/fab_margin">
+
+    <TextView
+        android:id="@+id/time_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_access_time_black_24dp"
+        android:onClick="onClick"
+        android:text="@string/input_time_hint"
+        android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Button"
+        app:layout_constraintEnd_toStartOf="@+id/place_txt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/place_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:drawableStart="@drawable/ic_location_on_black_24dp"
+        android:onClick="onClick"
+        android:hint="@string/input_place_hint"
+        android:textAppearance="@style/Base.TextAppearance.MaterialComponents.Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/time_txt"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Place" />
+
+    <shyn.zyot.mytravels.utils.MoneyEditText
+        android:id="@+id/amount_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="end"
+        android:hint="@string/expense_amount"
+        android:inputType="numberDecimal"
+        android:textAlignment="viewEnd"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/currency_spin"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_txt" />
+
+    <Spinner
+        android:id="@+id/currency_spin"
+        style="@android:style/Widget.Material.DropDownItem.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:entries="@array/currency_label"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_txt"
+        app:layout_constraintEnd_toStartOf="@+id/type_spin"
+        app:layout_constraintHorizontal_weight="3"
+        app:layout_constraintStart_toEndOf="@+id/amount_txt"
+        app:layout_constraintTop_toTopOf="@+id/amount_txt" />
+
+    <Spinner
+        android:id="@+id/type_spin"
+        style="@android:style/Widget.Material.DropDownItem.Spinner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:entries="@array/expense_label"
+        app:layout_constraintBottom_toBottomOf="@+id/amount_txt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="4"
+        app:layout_constraintStart_toEndOf="@+id/currency_spin"
+        app:layout_constraintTop_toTopOf="@+id/amount_txt" />
+
+    <EditText
+        android:id="@+id/title_txt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/input_plan_title_hint"
+        android:imeOptions="actionNext"
+        android:inputType="text"
+        android:maxLength="80"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_txt" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
